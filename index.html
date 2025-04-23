@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Catalog</title>
+    <title>Vista Yacht Catalog</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,63 +53,51 @@
             color: #666;
             margin-bottom: 15px;
         }
-        .catalog-cover {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-            display: none;
-        }
-        .active {
-            display: block;
-        }
         .flag-container {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 15px;
         }
+        .catalog-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0066FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Replace with your actual logo -->
-        <img src="https://imgur.com/a/C7hZ5Cf" alt="Company Logo" class="logo">
+        <!-- Company Logo -->
+        <img src="https://i.imgur.com/C7hZ5Cf.png" alt="Vista Yacht Logo" class="logo">
         
         <div class="language-selector">
             <div class="language-title">Veja o nosso Catálogo</div>
             <div class="language-subtitle">Take a look at our catalog</div>
             
             <div class="flag-container">
-                <div class="language-option" onclick="showPortuguese()">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg" alt="Portuguese" class="language-flag">
+                <a href="https://www.flipbookpdf.net/web/site/71899189fcfc3a7e16765853684df91384d86e7f202504.pdf.html" class="language-option">
+                    <img src="https://i.imgur.com/nhyUbHT.png" alt="Portuguese" class="language-flag">
                     <div>Português</div>
-                </div>
+                </a>
                 
-                <div class="language-option" onclick="showEnglish()">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" class="language-flag">
+                <a href="https://www.flipbookpdf.net/web/site/62b163682c92afafdcf5c1f3322fca7fe0cb8886202504.pdf.html" class="language-option">
+                    <img src="https://i.imgur.com/tbqBIRL.png" alt="English" class="language-flag">
                     <div>English</div>
-                </div>
+                </a>
             </div>
         </div>
         
-        <img id="portuguese-catalog" src="https://www.flipbookpdf.net/web/files/flipbooks/71899189fcfc3a7e16765853684df91384d86e7f202504.pdf/1.jpg" alt="Portuguese Catalog" class="catalog-cover">
-        <img id="english-catalog" src="https://www.flipbookpdf.net/web/site/d1d985c8a25c3c9ee227bb322a5e660da1bbeaf7202504.pdf.html" alt="English Catalog" class="catalog-cover">
+        <!-- Direct link buttons as fallback -->
+        <div>
+            <a href="https://www.flipbookpdf.net/web/site/71899189fcfc3a7e16765853684df91384d86e7f202504.pdf.html" class="catalog-link">Abrir Catálogo em Português</a>
+            <a href="https://www.flipbookpdf.net/web/site/62b163682c92afafdcf5c1f3322fca7fe0cb8886202504.pdf.html" class="catalog-link">Open English Catalog</a>
+        </div>
     </div>
-
-    <script>
-        // Show Portuguese catalog by default
-        document.getElementById('portuguese-catalog').classList.add('active');
-        
-        function showPortuguese() {
-            document.getElementById('portuguese-catalog').classList.add('active');
-            document.getElementById('english-catalog').classList.remove('active');
-        }
-        
-        function showEnglish() {
-            document.getElementById('english-catalog').classList.add('active');
-            document.getElementById('portuguese-catalog').classList.remove('active');
-        }
-    </script>
 </body>
 </html>
